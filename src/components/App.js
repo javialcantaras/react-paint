@@ -1,15 +1,8 @@
-import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import store from '../store'
+import React from 'react'
+import Canvas from './Canvas'
 
-class App extends Component {
-  render () {
-    return (
-      <Provider store={store}>
-        <h1>Atrapalo</h1>
-      </Provider>
-    )
-  }
-}
-
-export default App
+export default () => (
+  <div>
+    <Canvas />
+  </div>
+)
