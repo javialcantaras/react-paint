@@ -13,7 +13,7 @@ const mapStateToProps = state => {
     oldY: state.canvas.oldY,
     oldMidX: state.canvas.oldMidX,
     oldMidY: state.canvas.oldMidY,
-    color: '#000000',
+    color: state.tools.colors.find(({ picked }) => picked).hex || '#000000',
     stroke: 2
   }
 }

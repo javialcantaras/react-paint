@@ -1,10 +1,11 @@
 /* global describe it before:true */
 import {assert, expect} from 'chai'
-import { mouseUp, mouseDown, updateOldPositions } from '../src/actions'
+import { mouseUp, mouseDown, updateOldPositions, pickColor } from '../src/actions'
 import {
   ACTION_MOUSE_UP,
   ACTION_MOUSE_DOWN,
-  ACTION_UPDATE_OLD_POSITIONS
+  ACTION_UPDATE_OLD_POSITIONS,
+  ACTION_PICK_COLOR
 } from '../src/constants/actionTypes'
 
 describe('actions', () => {
@@ -61,6 +62,24 @@ describe('actions', () => {
 
     it('should return correct payload', () => {
       expect(result.payload).to.deep.equal({ x: 1, y: 2, midX: 3, midY: 4 })
+    })
+  })
+
+  describe('.pickColor', () => {
+    before(() => {
+      result = pickColor(2)
+    })
+
+    it('should return object', () => {
+      assert.typeOf(result, 'object')
+    })
+
+    it('should return correct type', () => {
+      assert.equal(result.type, ACTION_PICK_COLOR)
+    })
+
+    it('should return correct payload', () => {
+      expect(result.payload).to.deep.equal({ hex: 2 })
     })
   })
 })

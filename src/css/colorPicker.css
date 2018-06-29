@@ -1,0 +1,23 @@
+.colorPicker > main > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+}
+
+.colorPicker > main > ul > li {
+  padding: 5px;
+}
+
+.colorBox {
+  margin: 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: #606060 0px 0px 4px;
+}
+
+.picked {
+  box-shadow: #ff0000 0px 0px 12px;
+}

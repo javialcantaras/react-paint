@@ -1,7 +1,8 @@
 import {
   ACTION_MOUSE_UP,
   ACTION_MOUSE_DOWN,
-  ACTION_UPDATE_OLD_POSITIONS
+  ACTION_UPDATE_OLD_POSITIONS,
+  ACTION_PICK_COLOR
 } from './constants/actionTypes'
 
 export const mouseUp = () => ({
@@ -17,4 +18,9 @@ export const mouseDown = () => ({
 export const updateOldPositions = (x, y, midX, midY) => ({
   type: ACTION_UPDATE_OLD_POSITIONS,
   payload: { x, y, midX, midY }
+})
+
+export const pickColor = (hex) => ({
+  type: ACTION_PICK_COLOR,
+  payload: { hex }
 })
