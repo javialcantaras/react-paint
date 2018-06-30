@@ -12,9 +12,60 @@ canvas {
 }
 
 .tools {
-  padding-left: 15px;
+  padding-left: 1em;
   max-width: 20%;
   display: flex;
   flex-direction: column;
+}
+
+.tool {
+  width: 15em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  box-shadow: #c1c1c1 0px 0px 4px;
+}
+
+.tool__header {
+  font-size: 2.5em;
+  text-align: center;
+  padding-top: 0.2em;
+}
+
+.tool__content {
+  padding: 0px;
+  display: flex;
   align-items: center;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.tool__content--colors {
+  flex-wrap: wrap;
+}
+
+.tool__content--stroke {
+  flex-direction: column;
+}
+
+.tool__element {
+  padding: 0.4em;
+}
+
+.tool__element--picked {
+  box-shadow: #ff0000 0px 0px 12px;
+}
+
+.tool__element__stroke {
+  width: 12em;
+  background: #000000;
+  display: inline-block;
+}
+
+.tool__element__color {
+  margin: 0.05em;
+  width: 3em;
+  height: 3em;
+  border-radius: 1.5em;
+  display: inline-block;
+  box-shadow: #606060 0px 0px 4px;
 }

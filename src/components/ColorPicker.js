@@ -1,18 +1,15 @@
 import React from 'react'
 import ColorBox from './ColorBox'
-import '../css/colorPicker.css'
 
 export default ({ colors, colorClick }) => {
-  const mapper = (color, i) => (<li key={i} ><ColorBox {...color} callback={colorClick} /></li>)
+  const mapper = (color, i) => (<li className='tool__element' key={i} ><ColorBox {...color} callback={colorClick} /></li>)
   const colorComponents = colors.map(mapper)
   return (
-    <div className='colorPicker'>
-      <header>
-        <h3>Colors</h3>
+    <div className='tool'>
+      <header className='tool__header'>
+        <span>Colors</span>
       </header>
-      <main>
-        <ul>{colorComponents}</ul>
-      </main>
+      <ul className='tool__content tool__content--colors'>{colorComponents}</ul>
     </div>
   )
 }

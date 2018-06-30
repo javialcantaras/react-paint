@@ -1,6 +1,6 @@
 import { ACTION_PICK_COLOR, ACTION_PICK_STROKE } from '../constants/actionTypes'
 import colors, { BLACK } from '../constants/colors'
-import strokes, { STROKE_2 } from '../constants/strokes'
+import strokes, { STROKE_1 } from '../constants/strokes'
 
 const colorMapper = (hex) => ({ hex, picked: false })
 const strokeMapper = (num) => ({ num, picked: false })
@@ -36,7 +36,7 @@ const selectStrokes = (state, strokeNum) => {
 const defaultState = selectStrokes(selectColor({
   colors: colors.map(colorMapper),
   strokes: strokes.map(strokeMapper)
-}, BLACK), STROKE_2)
+}, BLACK), STROKE_1)
 
 export default (state = defaultState, action) => {
   switch (action.type) {

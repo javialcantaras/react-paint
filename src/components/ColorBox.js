@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default ({ hex, picked, callback }) => {
-  const pickedClass = picked ? 'picked' : ''
+  const pickedClass = picked ? 'tool__element--picked' : ''
   return (
     <span
-      className={`colorBox ${pickedClass}`}
+      className={`tool__element__color ${pickedClass}`}
       onClick={() => { callback(hex) }}
       style={{backgroundColor: hex}}
     />

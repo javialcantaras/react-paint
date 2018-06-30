@@ -1,13 +1,12 @@
 import React from 'react'
-import '../css/strokePicker.css'
 
 export default ({ num, picked, callback }) => {
-  const pickedClass = picked ? 'picked' : ''
+  const pickedClass = picked ? 'tool__element--picked' : ''
   const style = {height: `${num}px`}
   return (
     <div onClick={() => { callback(num) }}>
       <span
-        className={`strokeBox ${pickedClass}`}
+        className={`tool__element__stroke ${pickedClass}`}
         style={style}
       />
     </div>
