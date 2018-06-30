@@ -4,7 +4,7 @@ import StrokePicker from './StrokePicker'
 import { tools as container } from '../containers'
 
 const Tools = ({colors, strokes, strokeClick, colorClick}) => (
-  <div>
+  <div className='tools'>
     <ColorPicker colors={colors} colorClick={colorClick} />
     <StrokePicker strokes={strokes} strokeClick={strokeClick} />
   </div>
