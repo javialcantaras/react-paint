@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { pickColor } from '../actions'
+import { pickColor, pickStroke } from '../actions'
 
 /**
  * Create map state properties
@@ -8,7 +8,8 @@ import { pickColor } from '../actions'
  */
 const mapStateToProps = state => {
   return {
-    colors: state.tools.colors
+    colors: state.tools.colors,
+    strokes: state.tools.strokes
   }
 }
 
@@ -19,7 +20,8 @@ const mapStateToProps = state => {
  */
 const mapDispatchToProps = dispatch => {
   return {
-    colorClick: (hex) => dispatch(pickColor(hex))
+    colorClick: (hex) => dispatch(pickColor(hex)),
+    strokeClick: (hex) => dispatch(pickStroke(hex))
   }
 }
 

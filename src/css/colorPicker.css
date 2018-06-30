@@ -1,6 +1,7 @@
 .colorPicker > main > ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   align-items: center;
 }

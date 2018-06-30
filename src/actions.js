@@ -2,7 +2,8 @@ import {
   ACTION_MOUSE_UP,
   ACTION_MOUSE_DOWN,
   ACTION_UPDATE_OLD_POSITIONS,
-  ACTION_PICK_COLOR
+  ACTION_PICK_COLOR,
+  ACTION_PICK_STROKE
 } from './constants/actionTypes'
 
 export const mouseUp = () => ({
@@ -23,4 +24,9 @@ export const updateOldPositions = (x, y, midX, midY) => ({
 export const pickColor = (hex) => ({
   type: ACTION_PICK_COLOR,
   payload: { hex }
+})
+
+export const pickStroke = (num) => ({
+  type: ACTION_PICK_STROKE,
+  payload: { num }
 })
