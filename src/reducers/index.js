@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
-import common from './common'
+import tools from './tools'
+import canvas from './canvas'
 
-export default combineReducers({ common })
+export default combineReducers({ tools, canvas })

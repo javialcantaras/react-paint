@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "mocha --watch --compilers js:babel-core/register --recursive"
   },
+  "pre-commit": [
+    "test"
+  ],
   "author": "Javier Alcantara",
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.1",
+    "react-canvas-draw": "^0.1.9",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0"
@@ -20,9 +25,10 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2",
+    "react-scripts": "^1.1.4"
   }
 }
