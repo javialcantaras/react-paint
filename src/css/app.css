@@ -52,7 +52,7 @@ canvas {
 }
 
 .tool__element--picked {
-  box-shadow: #ff0000 0px 0px 12px;
+  box-shadow: #ff0000 0px 0px 12px !important;
 }
 
 .tool__element__stroke {
@@ -68,4 +68,22 @@ canvas {
   border-radius: 1.5em;
   display: inline-block;
   box-shadow: #606060 0px 0px 4px;
+}
+
+.tool__element__corrections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool__element__corrections__button {
+  margin: 1em;
+  background: #555555;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

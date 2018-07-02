@@ -1,9 +1,9 @@
 /* global describe it before:true */
-import {assert, expect} from 'chai'
+import { assert, expect } from 'chai'
 import reducer from '../../src/reducers/tools'
 import { ACTION_PICK_COLOR, ACTION_PICK_STROKE } from '../../src/constants/actionTypes'
 
-describe('Canvas reducers', () => {
+describe('Tools reducers', () => {
   let result
 
   describe('ACTION_PICK_STROKE', () => {
