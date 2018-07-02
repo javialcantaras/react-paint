@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { canvas as container } from '../containers'
+import React, { Component } from 'react'
 import CanvasDraw from 'react-canvas-draw'
+import { canvas as container } from '../containers'
 
 class Canvas extends Component {
   undo () {
@@ -47,11 +47,11 @@ class Canvas extends Component {
 }
 
 Canvas.propTypes = {
-  stroke: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
-  undo: PropTypes.bool.isRequired,
   redo: PropTypes.any,
+  undo: PropTypes.bool.isRequired,
+  color: PropTypes.string.isRequired,
   saveLine: PropTypes.func.isRequired,
+  stroke: PropTypes.number.isRequired,
   resetUndo: PropTypes.func.isRequired,
   resetRedo: PropTypes.func.isRequired
 }

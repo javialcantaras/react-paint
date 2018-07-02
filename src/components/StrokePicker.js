@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import StrokeBox from './StrokeBox'
 
-export default ({ strokes, strokeClick }) => {
+const StrokePicker = ({ strokes, strokeClick }) => {
   const mapper = (stroke, i) => (<li className='tool__element' key={i} ><StrokeBox {...stroke} callback={strokeClick} /></li>)
   const strokeComponents = strokes.map(mapper)
   return (
@@ -13,3 +14,10 @@ export default ({ strokes, strokeClick }) => {
     </div>
   )
 }
+
+StrokeBox.propTypes = {
+  strokes: PropTypes.array.isRequired,
+  strokeClick: PropTypes.func.isRequired
+}
+
+export default StrokePicker

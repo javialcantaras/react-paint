@@ -1,7 +1,7 @@
-import React from 'react'
-import Canvas from './Canvas'
-import Tools from './Tools'
 import '../css/app.css'
+import React from 'react'
+import Tools from './Tools'
+import Canvas from './Canvas'
 
 export default () => (
   <div className='app'>

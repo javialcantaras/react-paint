@@ -1,7 +1,8 @@
 import React from 'react'
 import ColorBox from './ColorBox'
+import PropTypes from 'prop-types'
 
-export default ({ colors, colorClick }) => {
+const ColorPicker = ({ colors, colorClick }) => {
   const mapper = (color, i) => (<li className='tool__element' key={i} ><ColorBox {...color} callback={colorClick} /></li>)
   const colorComponents = colors.map(mapper)
   return (
@@ -13,3 +14,10 @@ export default ({ colors, colorClick }) => {
     </div>
   )
 }
+
+ColorBox.propTypes = {
+  colorClick: PropTypes.func.isRequired,
+  colors: PropTypes.array.isRequired
+}
+
+export default ColorPicker
